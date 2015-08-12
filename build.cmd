@@ -1,0 +1,1 @@
+lessc --clean-css css/index.less > css/index.css 2> error.log
