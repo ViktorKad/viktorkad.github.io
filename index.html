@@ -6,17 +6,6 @@
     <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet/less" href="css/index.less">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
-    <script type="text/javascript">
-        function goTo(url) {
-            var url = url || null;
-
-            if(typeof url !== "string") {
-                return;
-            }
-
-            document.location.href = url;
-        }
-    </script>
 </head>
 <body class="body">
 
@@ -40,15 +29,15 @@
         <!-- /Первая строка -->
 
         <!-- Вторая строка -->
-        <div class="tile-middle tile-blue" onclick="goTo('http://viktorkad.github.io/js_space_shooter_proto/')">
+        <a href="http://viktorkad.github.io/js_space_shooter_proto/" class="tile-medium tile-blue">
             <div class="tile-body-img"><img src="./css/img/space_game_middle.png"></div>
-        </div>
+        </a>
 
-        <div class="tile-middle tile-blue tile-bg-cv" title="on-line версия резюме" onclick="goTo('http://viktorkad.github.io/cv/')">
+        <a href="http://viktorkad.github.io/cv/" class="tile-medium tile-blue tile-bg-cv" title="on-line версия резюме">
             <div class="tile-body-text-absolute-bottom">Резюме</div>
-        </div>
+        </a>
 
-        <div class="tile-middle-container">
+        <div class="tile-medium-container">
             <div class="tile-small tile-blue">
                 <div class="tile-body-text">Текст</div>
             </div>
@@ -57,7 +46,7 @@
             </div>
         </div>
 
-        <div class="tile-middle tile-blue">
+        <div class="tile-medium tile-blue">
             <div class="tile-title">ЗАГОЛОВОК</div>
             <div class="tile-body-text">Плитка текст</div>
         </div>
@@ -66,13 +55,13 @@
 
 
         <!-- Третья строка -->
-        <div class="tile-middle-container">
-            <div class="tile-small tile-blue tile-bg-github" title="Мой GitHub" onclick="goTo('https://github.com/viktorkad/')">
+        <div class="tile-medium-container">
+            <a href="https://github.com/viktorkad/" class="tile-small tile-blue tile-bg-github" title="Мой GitHub">
                 <div class="tile-body-text"></div>
-            </div>
-            <div class="tile-small tile-blue tile-bg-cv" title="on-line версия резюме"  onclick="goTo('http://viktorkad.github.io/cv/')">
+            </a>
+            <a href="http://viktorkad.github.io/cv/" class="tile-small tile-blue tile-bg-cv" title="on-line версия резюме">
                 <div class="tile-body-text"></div>
-            </div>
+            </a>
             <div class="tile-small tile-blue">
                 <div class="tile-body-text">Текст</div>
             </div>
@@ -84,10 +73,10 @@
         </div>
 
 
-        <div class="tile-middle tile-blue" title="Мой GitHub" onclick="goTo('https://github.com/viktorkad/')">
+        <a href="https://github.com/viktorkad/" class="tile-medium tile-blue" title="Мой GitHub">
             <div class="tile-title tile-green">GITHUB</div>
             <div class="tile-body-text">Перейти в список моих репозиториев</div>
-        </div>
+        </a>
         <!-- /Третья строка -->
 
     </div>
@@ -105,7 +94,7 @@
             Некоторые плитки дублируют друг друга.
         </div>
         <div class="overlap-action">
-            <a href="#" onclick="document.getElementById('overlap').className = 'overlap-hidden'">Посмотреть без претензий</a>
+            <a href="#" class="link" onclick="document.getElementById('overlap').className = 'overlap-hidden'">Посмотреть без претензий</a>
         </div>
     </div>
 </div>

@@ -1,11 +1,25 @@
-@tile_size_middle: 128px;
-@tile_padding: 2px;
 @row_count: 4;
 @line_count: 3;
 
-a,
-a:visited,
-a:active {
+@tile_size_medium: 128px;
+@tile_padding: 2px;
+@tile_hover_border_size: 3px;
+
+@tile_small_width: (@tile_size_medium / 2) - (2 * @tile_padding);
+@tile_small_height: (@tile_size_medium / 2) - (2 * @tile_padding);
+
+@tile_medium_width: @tile_size_medium - (2 * @tile_padding);
+@tile_medium_height: @tile_size_medium - (2 * @tile_padding);
+
+@tile_wide_width: (@tile_size_medium * 2) - (2 * @tile_padding);
+@tile_wide_height: @tile_size_medium - (2 * @tile_padding);
+
+@tile_large_width: (@tile_size_medium * 2) - (2 * @tile_padding);
+@tile_large_height: (@tile_size_medium * 2) - (2 * @tile_padding);
+
+.link,
+.link:visited,
+.link:active {
     @link-color: #166CA1;
     @link-color-hover: lighten(#166CA1, 10%);
 
@@ -18,12 +32,12 @@ a:active {
         text-decoration: none;
         border-bottom: 1px @link-color-hover dashed;
     }
- }
+}
 
-.outer_link {
+.outer-link {
     border-style: solid;
 }
-.outer_link:hover {
+.outer-link:hover {
     border-style: solid;
 }
 
@@ -42,8 +56,8 @@ a:active {
 }
 
 .tiles {
-    @width: @tile_size_middle * @row_count;
-    @height: @tile_size_middle * @line_count;
+    @width: @tile_size_medium * @row_count;
+    @height: @tile_size_medium * @line_count;
 
     position: absolute;
     top: 50%;
@@ -98,56 +112,92 @@ a:active {
     }
 }
 
+.tile-hover-after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: @tile_hover_border_size solid rgba(255, 255, 255, 0.6);
+}
+
 .tile-small {
     .tile;
 
-    width: (@tile_size_middle / 2) - (2 * @tile_padding);
-    height: (@tile_size_middle / 2) - (2 * @tile_padding);
+    width: @tile_small_width;
+    height: @tile_small_height;
 }
 
-.tile-middle {
+.tile-small:hover:after {
+    .tile-hover-after;
+    
+    width: @tile_small_width - (2 * @tile_hover_border_size);
+    height: @tile_small_height - (2 * @tile_hover_border_size);
+}
+
+.tile-medium {
     .tile;
     
-    width: @tile_size_middle - (2 * @tile_padding);
-    height: @tile_size_middle - (2 * @tile_padding);
+    width: @tile_medium_width;
+    height: @tile_medium_height;
 }
 
-.tile-middle-container {
+.tile-medium:hover:after {
+    .tile-hover-after;
+    
+    width: @tile_medium_width - (2 * @tile_hover_border_size);
+    height: @tile_medium_height - (2 * @tile_hover_border_size);
+}
+
+.tile-medium-container {
     .tile;
     margin: 0;
     
-    width: @tile_size_middle;
-    height: @tile_size_middle;
+    width: @tile_size_medium;
+    height: @tile_size_medium;
 }
 
 .tile-wide {
     .tile;
 
-    width: (@tile_size_middle * 2) - (2 * @tile_padding);
-    height: @tile_size_middle - (2 * @tile_padding);
+    width: @tile_wide_width;
+    height: @tile_wide_height;
+}
+
+.tile-wide:hover:after {
+    .tile-hover-after;
+    
+    width: @tile_wide_width - (2 * @tile_hover_border_size);
+    height: @tile_wide_height - (2 * @tile_hover_border_size);
 }
 
 .tile-wide-container {
     .tile;
     margin: 0;
 
-    width: @tile_size_middle * 2;
-    height: @tile_size_middle;
+    width: @tile_size_medium * 2;
+    height: @tile_size_medium;
 }
 
 .tile-large {
     .tile;
 
-    width: (@tile_size_middle * 2) - (2 * @tile_padding);
-    height: (@tile_size_middle * 2) - (2 * @tile_padding);
+    width: @tile_large_width;
+    height: @tile_large_height;
+}
+
+.tile-large:hover:after {
+    .tile-hover-after;
+    
+    width: @tile_large_width - (2 * @tile_hover_border_size);
+    height: @tile_large_height - (2 * @tile_hover_border_size);
 }
 
 .tile-large-container {
     .tile;
     margin: 0;
 
-    width: @tile_size_middle * 2;
-    height: @tile_size_middle * 2;
+    width: @tile_size_medium * 2;
+    height: @tile_size_medium * 2;
 }
 
 .overlap {
@@ -201,10 +251,10 @@ a:active {
 }
 .tile-bg-github {
     .tile-bg;
-    background-image: url("./img/octocat_middle.png");
+    background-image: url("./img/octocat_medium.png");
 }
 
 .tile-bg-cv {
     .tile-bg;
-    background-image: url("./img/cv_middle.png");
+    background-image: url("./img/cv_medium.png");
 }
