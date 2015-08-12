@@ -1,5 +1,7 @@
 @row_count: 4;
 @line_count: 3;
+@row_count_mobile: 2;
+@line_count_mobile: 6;
 
 @tile_size_medium: 128px;
 @tile_padding: 2px;
@@ -72,8 +74,19 @@
     padding: @tile_padding;
     display: block;
 
-}
+    @media screen {
+        @media (max-width: 768px) {
+            @width: @tile_size_medium * @row_count_mobile;
+            @height: 0;
+            top: 0;
 
+            width: @width;
+            height: @height;
+            margin-left: -(@width / 2 - @tile_padding);
+            margin-top: 0;
+        }
+    }
+}
 
 .tile-color {
     color: rgb(255, 255, 255);
