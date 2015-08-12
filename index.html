@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script type="text/javascript">
+        function goTo(url) {
+            var url = url || null;
+
+            if(typeof url !== "string") {
+                return;
+            }
+
+            document.location.href = url;
+        }
+    </script>
+</head>
+<body class="body">
+
+<header class="header"></header>
+<div class="content">
+
+    <div class="tiles">
+
+    <div class="tile-block"></div>
+        <!-- Первая строка -->
+
+        <div class="tile-wide tile-blue">
+            <div class="tile-title">ЗАГОЛОВОК</div>
+            <div class="tile-body-text">Плитка текст</div>
+        </div>
+
+        <div class="tile-wide tile-blue">
+            <div class="tile-title">ЗАГОЛОВОК</div>
+            <div class="tile-body-text">Плитка текст</div>
+        </div>
+        <!-- /Первая строка -->
+
+        <!-- Вторая строка -->
+        <div class="tile-middle tile-blue" onclick="goTo('http://viktorkad.github.io/js_space_shooter_proto/')">
+            <div class="tile-body-img"><img src="./css/img/space_game_middle.png"></div>
+        </div>
+
+        <div class="tile-middle tile-blue tile-bg-cv" title="on-line версия резюме" onclick="goTo('http://viktorkad.github.io/cv/')">
+            <div class="tile-body-text-absolute-bottom">Резюме</div>
+        </div>
+
+        <div class="tile-middle-container">
+            <div class="tile-small tile-blue">
+                <div class="tile-body-text">Текст</div>
+            </div>
+            <div class="tile-small tile-blue">
+                <div class="tile-body-text">Текст</div>
+            </div>
+        </div>
+
+        <div class="tile-middle tile-blue">
+            <div class="tile-title">ЗАГОЛОВОК</div>
+            <div class="tile-body-text">Плитка текст</div>
+        </div>
+
+        <!-- /Вторая строка -->
+
+
+        <!-- Третья строка -->
+        <div class="tile-middle-container">
+            <div class="tile-small tile-blue tile-bg-github" title="Мой GitHub" onclick="goTo('https://github.com/viktorkad/')">
+                <div class="tile-body-text"></div>
+            </div>
+            <div class="tile-small tile-blue tile-bg-cv" title="on-line версия резюме"  onclick="goTo('http://viktorkad.github.io/cv/')">
+                <div class="tile-body-text"></div>
+            </div>
+            <div class="tile-small tile-blue">
+                <div class="tile-body-text">Текст</div>
+            </div>
+        </div>
+
+        <div class="tile-wide tile-blue">
+            <div class="tile-title">ЗАГОЛОВОК</div>
+            <div class="tile-body-text">Плитка текст</div>
+        </div>
+
+
+        <div class="tile-middle tile-blue" title="Мой GitHub" onclick="goTo('https://github.com/viktorkad/')">
+            <div class="tile-title tile-green">GITHUB</div>
+            <div class="tile-body-text">Перейти в список моих репозиториев</div>
+        </div>
+        <!-- /Третья строка -->
+
+    </div>
+
+</div>
+
+<div id="overlap" class="overlap">
+    <div class="overlap-info">
+        <div class="overlap-title">
+            Приветствую.
+        </div>
+        <div class="overlap-body">
+            Данная страница в настоящее время находится в разработке.
+            Пока не готовы анимашки и изменение положения плиток при изменении разрешения экрана.
+            Некоторые плитки дублируют друг друга.
+        </div>
+        <div class="overlap-action">
+            <a href="#" onclick="document.getElementById('overlap').className = 'overlap-hidden'">Посмотреть без претензий</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer"></footer>
+
+</body>
+</html>
+
+
