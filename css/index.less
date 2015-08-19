@@ -135,7 +135,7 @@
     .tile-body-text-absolute-bottom {
         .tile-body-text;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
     }
 
     .tile-body-img {
@@ -147,8 +147,8 @@
 .tile-hover-after {
     content: "";
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     border: @tile_hover_border_size solid rgba(255, 255, 255, 0.6);
 }
 
@@ -166,14 +166,8 @@
         height: @tile_small_height - @tile_double_hover_border_size;
     }
 
-    .tile-small:active {
-        margin: @tile_double_hover_border_size;
-        width: @tile_small_width - @tile_double_hover_border_size;
-        height: @tile_small_height - @tile_double_hover_border_size;
-    }
-
     .tile-small:active:after {
-        border: none;
+        border-color: @color_body_bg;
     }
 
 .tile-medium {
@@ -190,14 +184,8 @@
         height: @tile_medium_height - @tile_double_hover_border_size;
     }
 
-    .tile-medium:active {
-        margin: @tile_double_hover_border_size;
-        width: @tile_medium_width - @tile_double_hover_border_size;
-        height: @tile_medium_height - @tile_double_hover_border_size;
-    }
-
     .tile-medium:active:after {
-        border: none;
+        border-color: @color_body_bg;
     }
 
 .tile-medium-container {
@@ -222,14 +210,8 @@
         height: @tile_wide_height - @tile_double_hover_border_size;
     }
 
-    .tile-wide:active {
-        margin: @tile_double_hover_border_size;
-        width: @tile_wide_width - @tile_double_hover_border_size;
-        height: @tile_wide_height - @tile_double_hover_border_size;
-    }
-
     .tile-wide:active:after {
-        border: none;
+        border-color: @color_body_bg;
     }
 
 .tile-wide-container {
@@ -254,14 +236,8 @@
         height: @tile_large_height - @tile_double_hover_border_size;
     }
 
-    .tile-large:active {
-        margin: @tile_double_hover_border_size;
-        width: @tile_large_width - @tile_double_hover_border_size;
-        height: @tile_large_height - @tile_double_hover_border_size;
-    }
-
     .tile-large:active:after {
-        border: none;
+        border-color: @color_body_bg;
     }
 
 .tile-large-container {
